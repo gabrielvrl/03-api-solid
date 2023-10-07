@@ -54,8 +54,7 @@ describe('Register Use Case', () => {
       password: '123456'
     })
 
-    expect(user.id).toEqual(expect.any(String))
-    
+    expect(user.id).toEqual(expect.any(String))    
   })
 
 })
