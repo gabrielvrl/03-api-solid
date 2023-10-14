@@ -52,13 +52,12 @@ describe('Register Use Case', () => {
       userId: 'user-id',
     })
 
-    vi.setSystemTime(new Date(2022, 0, 20, 8, 0, 0))
+    vi.setSystemTime(new Date(2022, 0, 21, 8, 0, 0))
 
     const { checkIn } = await sut.execute({
       gymId: 'gym-id',
       userId: 'user-id',
     })
-
 
     expect(checkIn.id).toEqual(expect.any(String))
   })
