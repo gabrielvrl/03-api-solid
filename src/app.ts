@@ -13,11 +13,13 @@ app.register(jwt, {
 app.register(appRoutes)
 
 app.setErrorHandler((error, _, reply) => {
-  if(error instanceof ZodError) {
-    return reply.status(400).send({ message: 'Validation Error', issues: error.format() })
+  if (error instanceof ZodError) {
+    return reply
+      .status(400)
+      .send({ message: 'Validation Error', issues: error.format() })
   }
 
-  if(env.NODE_ENV !== 'production') {
+  if (env.NODE_ENV !== 'production') {
     console.error(error)
   } else {
     // TODO: Here we should log to an external tool like Datalog/NewRelic/Sentry
