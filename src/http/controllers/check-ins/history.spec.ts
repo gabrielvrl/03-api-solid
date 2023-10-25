@@ -3,6 +3,7 @@ import { app } from '@/app'
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
 import { createAndAuthenticateUser } from '@/utils/test/create-and-authenticate-user'
 import { prisma } from '@/lib/prisma'
+import console from 'console'
 
 describe('Check-in History (e2e)', () => {
   beforeAll(async () => {
