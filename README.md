@@ -1,6 +1,6 @@
 # App
 
-Gympass Style app.
+Gympass Style app
 
 ## RFs (Requisitos funcionais)
 
